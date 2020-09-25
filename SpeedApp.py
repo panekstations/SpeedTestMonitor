@@ -9,6 +9,7 @@ con = st.host
 print(con)
 
 timerdelay = 10
+pingspeed = " ms"
 displayspeed = " mbps"
 icontodisplay = "lighticon.png"
 
@@ -18,7 +19,7 @@ icontodisplay = "lighticon.png"
 def ping_timer(menu_item):
     def ping(timer):
         pn = st.ping()
-        menu_item.title = 'Ping: ' + str(round(pn,1)) + displayspeed
+        menu_item.title = 'Ping: ' + str(round(pn,1)) + pingspeed
     return rumps.Timer(ping, timerdelay)
 
 def up_timer(menu_item):
