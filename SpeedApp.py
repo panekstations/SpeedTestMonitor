@@ -40,9 +40,9 @@ def serv_timer(menu_item):
         menu_item.title = str(pn)
     return rumps.Timer(serv, timerdelay)
 
-class AwesomeStatusBarApp(rumps.App):
+class SpeedStatusApp(rumps.App):
     def __init__(self):
-        super(AwesomeStatusBarApp, self).__init__(name="SpeedTest Monitor", icon=icontodisplay)
+        super(SpeedStatusApp, self).__init__(name="SpeedTest Monitor", icon=icontodisplay)
         self.ping_item = rumps.MenuItem("Ping: N/A ms")
         self.down_item = rumps.MenuItem("Down: N/A mbps")
         self.up_item = rumps.MenuItem("Up: N/A mbps")
@@ -55,4 +55,4 @@ class AwesomeStatusBarApp(rumps.App):
         self.menu = [self.ping_item, self.down_item, self.up_item, self.serv_item]
 
 if __name__ == "__main__":
-    AwesomeStatusBarApp().run()
+    SpeedStatusApp().run()
